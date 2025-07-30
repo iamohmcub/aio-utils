@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Utils</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+
+<body>
+    <h1 class="title">🛠️</h1>
+    <div class="grid">
+        <div id="uuid"></div>
+        <div id="mongoid"></div>
+        <div id="base64"></div>
+        <div id="timestamp"></div>
+        <div id="text"></div>
+        <div id="jwt"></div>
+        <div id="password"></div>
+        <div id="qr"></div>
+        <div id="json"></div>
+    </div>
+
+    <script type="module">
+        import { renderUUIDTool } from './tools/uuid.js';
+        import { renderBase64Tool } from './tools/base64.js';
+        import { renderTimestampTool } from './tools/timestamp.js';
+        import { renderTextTool } from './tools/text.js';
+        import { renderMongoIdTool } from './tools/mongoid.js';
+        import { renderJWTTool } from './tools/jwt.js';
+        import { renderPasswordTool } from './tools/password.js';
+        import { renderQRCodeTool } from './tools/qr.js';
+        import { renderJSONEditorTool } from './tools/json.js';
+
+        renderUUIDTool(document.getElementById('uuid'));
+        renderBase64Tool(document.getElementById('base64'));
+        renderTimestampTool(document.getElementById('timestamp'));
+        renderTextTool(document.getElementById('text'));
+        renderMongoIdTool(document.getElementById('mongoid'));
+        renderJWTTool(document.getElementById('jwt'));
+        renderPasswordTool(document.getElementById('password'));
+        renderQRCodeTool(document.getElementById('qr'));
+        renderJSONEditorTool(document.getElementById('json'));
+    </script>
+</body>
+
+</html>
